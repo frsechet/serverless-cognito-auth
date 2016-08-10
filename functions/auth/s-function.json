@@ -1,0 +1,68 @@
+{
+    "name": "auth",
+    "runtime": "nodejs4.3",
+    "description": "Serverless Lambda function for project: sls-cognito-auth",
+    "customName": false,
+    "customRole": false,
+    "handler": "handler.handler",
+    "timeout": 6,
+    "memorySize": 1024,
+    "authorizer": {},
+    "custom": {
+        "excludePatterns": []
+    },
+    "endpoints": [
+        {
+            "path": "auth/{operation}",
+            "method": "POST",
+            "type": "AWS",
+            "authorizationType": "none",
+            "authorizerFunction": false,
+            "apiKeyRequired": false,
+            "requestParameters": {},
+            "requestTemplates": "$${apiGatewayRequestTemplate}",
+            "responses": {
+                "400": "$${400ResponseTemplate}",
+                "401": "$${401ResponseTemplate}",
+                "403": "$${403ResponseTemplate}",
+                "404": "$${404ResponseTemplate}",
+                "500": "$${500ResponseTemplate}",
+                "504": "$${504ResponseTemplate}",
+                "default": "$${defaultResponseTemplate}"
+            }
+        }
+    ],
+    "events": [],
+    "environment": {
+        "SERVERLESS_PROJECT": "${project}",
+        "SERVERLESS_STAGE": "${stage}",
+        "SERVERLESS_REGION": "${region}",
+        "AWS_ACCOUNT_ID": "${AWS_ACCOUNT_ID}",
+        "COGNITO_IDENTITY_POOL_ID": "${COGNITO_IDENTITY_POOL_ID}",
+        "COGNITO_DEVELOPER_PROVIDER_NAME": "${COGNITO_DEVELOPER_PROVIDER_NAME}",
+        "COGNITO_SEPARATOR": "${COGNITO_SEPARATOR}",
+        "COGNITO_DATASET_NAME": "${COGNITO_DATASET_NAME}",
+        "COGNITO_PASSWORD_RESET_URL": "${COGNITO_PASSWORD_RESET_URL}",
+        "COGNITO_PASSWORD_RESET_BODY": "${COGNITO_PASSWORD_RESET_BODY}",
+        "COGNITO_PASSWORD_RESET_SUBJECT": "${COGNITO_PASSWORD_RESET_SUBJECT}",
+        "COGNITO_PASSWORD_RESET_SOURCE": "${COGNITO_PASSWORD_RESET_SOURCE}",
+        "AWS_REGION": "${region}",
+        "AWS_ACCESS_KEY_ID": "${AWS_ACCESS_KEY_ID}",
+        "AWS_SECRET_ACCESS_KEY": "${AWS_SECRET_ACCESS_KEY}",
+        "STRIPE_SECRET": "${STRIPE_SECRET}",
+        "PAYPAL_SECRET": "${PAYPAL_SECRET}",
+        "GOOGLE_CLIENT_ID": "${GOOGLE_CLIENT_ID}",
+        "GOOGLE_SECRET": "${GOOGLE_SECRET}",
+        "AMAZON_CLIENT_ID": "${AMAZON_CLIENT_ID}",
+        "AMAZON_SECRET": "${AMAZON_SECRET}",
+        "STRIPE_SECRET": "${STRIPE_SECRET}",
+        "STRIPE_SECRET": "${STRIPE_SECRET}",
+        "STRIPE_SECRET": "${STRIPE_SECRET}",
+        "STRIPE_SECRET": "${STRIPE_SECRET}",
+        "STRIPE_SECRET": "${STRIPE_SECRET}"
+    },
+    "vpc": {
+        "securityGroupIds": [],
+        "subnetIds": []
+    }
+}

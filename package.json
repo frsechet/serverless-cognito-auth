@@ -1,0 +1,13 @@
+{
+    "name": "serverless-cognito-auth",
+    "version": "0.0.1",
+    "description": "A serverless federated authentication service running on AWS Lambda and API Gateway using the Serverless framework",
+    "author": "Francois Sechet <francois@eundigital.com>",
+    "license": "MIT",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/"
+    },
+    "dependencies": {}
+}
