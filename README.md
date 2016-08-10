@@ -1,15 +1,28 @@
 # serverless-cognito-auth
 
 AWS Cognito serverless authentication service backend based on AWS Lambda, API Gateway and the Serverless framework.
-Adaptation for Serverless of the excellent cognito-helper package: https://github.com/olegabu/cognito-helper
+
+Cost-efficient (pay only for active users and actual API calls, no server to setup and manage), reliable, resilient.
+
+Adaptation for the Serverless framework of the excellent cognito-helper package: https://github.com/olegabu/cognito-helper
+Hence, read the documentation there about what it does :-)
 
 ## getting started
+
+To get started, you require a AWS account.
 
 ```
 npm install
 sls init
+```
+
+Setup the `_meta/variables` using the `s-variables-sample.json` provided, then run:
+
+```
 sls dash deploy
 ```
+
+For more information about the Serverless framework: http://docs.serverless.com/
 
 ## REST interface
 
