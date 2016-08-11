@@ -9,10 +9,12 @@ Hence, read the documentation there about what it does :-)
 
 ## getting started
 
-To get started, you require a AWS account.
+To get started, you require a AWS account, node and npm installed, as well as serverless.
 
 ```
-npm install
+git clone https://github.com/frsechet/serverless-cognito-auth
+cd serverless-cognito-auth
+npm install && npm install -g serverless
 sls init
 ```
 
