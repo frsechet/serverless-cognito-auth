@@ -15,7 +15,7 @@ To get started, you require a AWS account, node and npm installed, as well as se
 git clone https://github.com/frsechet/serverless-cognito-auth
 cd serverless-cognito-auth
 npm install && npm install -g serverless
-sls init
+sls project init
 ```
 
 Setup the `_meta/variables` using the `s-variables-sample.json` provided, then run:
