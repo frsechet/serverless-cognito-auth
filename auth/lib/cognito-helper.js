@@ -20,33 +20,33 @@ var configDefault = require('./config');
  * @param {Object} config - default config settings can be loaded from config.js 
  */
 function CognitoHelper(config) {
-  if(!config) {
-    config = configDefault;
-    logger.info('cognito-helper loaded default config', config);
-  }
-  else {
-    logger.info('cognito-helper loaded config', config);
-  }
-  
+    if(!config) {
+        config = configDefault;
+        logger.info('cognito-helper loaded default config', config);
+    }
+    else {
+        logger.info('cognito-helper loaded config', config);
+    }
+
     var CognitoHelper = this;
-    
-  var cognitoIdentity = new AWS.CognitoIdentity();
-  
-  var cognitoSync = new AWS.CognitoSync();
-  
-  var ses = new AWS.SES();
-  
-  var encryptPassword = function(password) {
-    return sha256(password);
-  };
-  
-  var getRefreshTokenKey = function(provider) {
-    return  'refresh' + provider;
-  };
-  
-  var getProfileKey = function(provider) {
-    return  'profile' + provider;
-  };
+
+    var cognitoIdentity = new AWS.CognitoIdentity();
+
+    var cognitoSync = new AWS.CognitoSync();
+
+    var ses = new AWS.SES();
+
+    var encryptPassword = function(password) {
+        return sha256(password);
+    };
+
+    var getRefreshTokenKey = function(provider) {
+        return  'refresh' + provider;
+    };
+
+    var getProfileKey = function(provider) {
+        return  'profile' + provider;
+    };
 
     var normalizeProvider = function(providerName, token) {
       var isDeveloper = false;

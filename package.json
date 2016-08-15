@@ -1,5 +1,5 @@
 {
-    "name": "serverless-cognito-auth",
+    "name": "sls-cognito-auth",
     "version": "0.0.1",
     "description": "A serverless federated authentication service running on AWS Lambda and API Gateway using the Serverless framework",
     "author": "Francois Sechet <francois@eundigital.com>",
@@ -9,5 +9,18 @@
         "type": "git",
         "url": "git://github.com/"
     },
-    "dependencies": {}
+    "dependencies": {
+        "async": "^2.0.1",
+        "aws-sdk": "^2.4.12",
+        "https-proxy-agent": "^1.0.0",
+        "js-sha256": "^0.3.0",
+        "jwt-simple": "^0.5.0",
+        "lodash": "^4.14.1",
+        "log4js": "^0.6.38",
+        "moment": "^2.14.1",
+        "randomstring": "^1.1.5",
+        "request": "^2.74.0",
+        "string-format": "^0.5.0"
+    }
+
 }

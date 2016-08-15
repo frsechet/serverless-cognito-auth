@@ -1,5 +1,5 @@
 {
-    "name": "sls-cognito-auth",
-    "custom": {},
-    "plugins": []
+  "name": "sls-cognito-auth",
+  "custom": {},
+  "plugins": []
 }

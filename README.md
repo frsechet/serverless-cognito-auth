@@ -9,16 +9,16 @@ Hence, read the documentation there about what it does :-)
 
 ## getting started
 
-To get started, you require a AWS account, node and npm installed, as well as serverless.
+To get started, you require a AWS account, node and npm installed, as well as serverless (v0.5.x only).
 
 ```
 git clone https://github.com/frsechet/serverless-cognito-auth
 cd serverless-cognito-auth
-npm install && npm install -g serverless
+npm install && npm install -g serverless@^0.5
 sls project init
 ```
 
-Setup the `_meta/variables` using the `s-variables-sample.json` provided, then run:
+Setup your Cognito Identity Pool and the external providers (facebook, google etc.), setup your stage variables in `_meta/variables/stage.json` using the `s-variables-sample.json` provided, then run:
 
 ```
 sls dash deploy

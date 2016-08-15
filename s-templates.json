@@ -1,92 +1,92 @@
 {
-    "apiGatewayRequestTemplate": {
-        "application/json": {
-            "payload": "$input.json('$')",
-            "operation": "$input.params('operation')"
-        }
-    },
-    "400ResponseTemplate": {
-        "selectionPattern": ".*Bad Request.*",
-        "statusCode": "400",
-        "responseParameters": {},
-        "responseModels": {
-            "application/json;charset=UTF-8": "Error"
-        },
-        "responseTemplates": {
-            "application/json;charset=UTF-8": "$util.parseJson($input.json('$.errorMessage'))"
-        }
-    },
-    "401ResponseTemplate": {
-        "selectionPattern": ".*Unauthorized.*",
-        "statusCode": "401",
-        "responseParameters": {},
-        "responseModels": {
-            "application/json;charset=UTF-8": "Error"
-        },
-        "responseTemplates": {
-            "application/json;charset=UTF-8": "$util.parseJson($input.json('$.errorMessage'))"
-        }
-    },
-    "404ResponseTemplate": {
-        "selectionPattern": ".*Not Found.*",
-        "statusCode": "404",
-        "responseParameters": {},
-        "responseModels": {
-            "application/json;charset=UTF-8": "Error"
-        },
-        "responseTemplates": {
-            "application/json;charset=UTF-8": "$util.parseJson($input.json('$.errorMessage'))"
-        }
-    },
-    "409ResponseTemplate": {
-        "selectionPattern": ".*Conflict.*",
-        "statusCode": "409",
-        "responseParameters": {},
-        "responseModels": {
-            "application/json;charset=UTF-8": "Error"
-        },
-        "responseTemplates": {
-            "application/json;charset=UTF-8": "$util.parseJson($input.json('$.errorMessage'))"
-        }
-    },
-    "500ResponseTemplate": {
-        "selectionPattern": ".*Process exited.*",
-        "statusCode": "500",
-        "responseParameters": {},
-        "responseModels": {
-            "application/json;charset=UTF-8": "Error"
-        },
-        "responseTemplates": "$${500ErrorTemplate}"
-    },
-    "504ResponseTemplate": {
-        "selectionPattern": ".*Task timed out.*",
-        "statusCode": "504",
-        "responseParameters": {},
-        "responseModels": {
-            "application/json;charset=UTF-8": "Error"
-        },
-        "responseTemplates": "$${504ErrorTemplate}"
-    },
-    "defaultResponseTemplate": {
-        "statusCode": "200",
-        "responseParameters": {},
-        "responseModels": {
-            "application/json;charset=UTF-8": "Empty"
-        },
-        "responseTemplates": {
-            "application/json;charset=UTF-8": "$input.json('$')"
-        }
-    },
-    "500ErrorTemplate": {
-        "application/json": {
-            "statusCode": 500,
-            "statusMessage": "Internal Error"
-        }
-    },
-    "504ErrorTemplate": {
-        "application/json": {
-            "statusCode": 504,
-            "statusMessage": "Gateway Timeout"
-        }
+  "apiGatewayRequestTemplate": {
+    "application/json": {
+      "payload": "$input.json('$')",
+      "operation": "$input.params('operation')"
     }
+  },
+  "400ResponseTemplate": {
+    "selectionPattern": ".*Bad Request.*",
+    "statusCode": "400",
+    "responseParameters": {},
+    "responseModels": {
+      "application/json;charset=UTF-8": "Error"
+    },
+    "responseTemplates": {
+      "application/json;charset=UTF-8": "$util.parseJson($input.json('$.errorMessage'))"
+    }
+  },
+  "401ResponseTemplate": {
+    "selectionPattern": ".*Unauthorized.*",
+    "statusCode": "401",
+    "responseParameters": {},
+    "responseModels": {
+      "application/json;charset=UTF-8": "Error"
+    },
+    "responseTemplates": {
+      "application/json;charset=UTF-8": "$util.parseJson($input.json('$.errorMessage'))"
+    }
+  },
+  "404ResponseTemplate": {
+    "selectionPattern": ".*Not Found.*",
+    "statusCode": "404",
+    "responseParameters": {},
+    "responseModels": {
+      "application/json;charset=UTF-8": "Error"
+    },
+    "responseTemplates": {
+      "application/json;charset=UTF-8": "$util.parseJson($input.json('$.errorMessage'))"
+    }
+  },
+  "409ResponseTemplate": {
+    "selectionPattern": ".*Conflict.*",
+    "statusCode": "409",
+    "responseParameters": {},
+    "responseModels": {
+      "application/json;charset=UTF-8": "Error"
+    },
+    "responseTemplates": {
+      "application/json;charset=UTF-8": "$util.parseJson($input.json('$.errorMessage'))"
+    }
+  },
+  "500ResponseTemplate": {
+    "selectionPattern": ".*Process exited.*",
+    "statusCode": "500",
+    "responseParameters": {},
+    "responseModels": {
+      "application/json;charset=UTF-8": "Error"
+    },
+    "responseTemplates": "$${500ErrorTemplate}"
+  },
+  "504ResponseTemplate": {
+    "selectionPattern": ".*Task timed out.*",
+    "statusCode": "504",
+    "responseParameters": {},
+    "responseModels": {
+      "application/json;charset=UTF-8": "Error"
+    },
+    "responseTemplates": "$${504ErrorTemplate}"
+  },
+  "defaultResponseTemplate": {
+    "statusCode": "200",
+    "responseParameters": {},
+    "responseModels": {
+      "application/json;charset=UTF-8": "Empty"
+    },
+    "responseTemplates": {
+      "application/json;charset=UTF-8": "$input.json('$')"
+    }
+  },
+  "500ErrorTemplate": {
+    "application/json": {
+      "statusCode": 500,
+      "statusMessage": "Internal Error"
+    }
+  },
+  "504ErrorTemplate": {
+    "application/json": {
+      "statusCode": 504,
+      "statusMessage": "Gateway Timeout"
+    }
+  }
 }

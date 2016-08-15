@@ -1,0 +1,4 @@
+{
+    "operation": "signup",
+    "payload": {"name":"FS","email":"plop@zerzerzer.com","password":"test123"}
+}

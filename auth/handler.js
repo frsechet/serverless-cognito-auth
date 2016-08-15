@@ -7,6 +7,8 @@ var cognito = new CognitoHelper();
 var config = require('./lib/server-config');
 console.log('lambda loaded config', config);
 
+var AWS = require('./lib/aws');
+
 /*
 |--------------------------------------------------------------------------
 | Generate JSON Web Token
@@ -112,10 +114,8 @@ exports.handler  = function(event, context) {
     };
 
     var tokenCallback = function(err, data) {
-        /*
         console.log('tokenCallback err', err);
         console.log('tokenCallback data', data);
-        */
         if(err) {
             context.fail(makeError(err));
         }
