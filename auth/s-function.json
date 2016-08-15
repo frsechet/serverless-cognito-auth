@@ -54,7 +54,9 @@
     "GOOGLE_CLIENT_ID": "${GOOGLE_CLIENT_ID}",
     "GOOGLE_SECRET": "${GOOGLE_SECRET}",
     "AMAZON_CLIENT_ID": "${AMAZON_CLIENT_ID}",
-    "AMAZON_SECRET": "${AMAZON_SECRET}"
+    "AMAZON_SECRET": "${AMAZON_SECRET}",
+    "TOKEN_SECRET": "${TOKEN_SECRET}",
+    "EXPIRES_IN": "${EXPIRES_IN}"
   },
   "vpc": {
     "securityGroupIds": [],
