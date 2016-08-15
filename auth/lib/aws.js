@@ -13,7 +13,9 @@ var proxy = process.env.https_proxy
 
 if(proxy) {
     var HttpProxyAgent = require('https-proxy-agent');
-    AWS.config.httpOptions = {agent: new HttpProxyAgent(proxy)};
+    AWS.config.update({
+        httpOptions: {agent: new HttpProxyAgent(proxy)}
+    });
     console.log('aws is using https-proxy-agent for proxy ' + proxy);
 }
 
