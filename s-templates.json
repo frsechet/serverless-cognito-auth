@@ -2,6 +2,7 @@
   "apiGatewayRequestTemplate": {
     "application/json": {
       "payload": "$input.json('$')",
+      "authorization": "$input.params().header.get('Authorization')",
       "operation": "$input.params('operation')"
     }
   },
